@@ -119,7 +119,7 @@ const App = () => {
               <p className="text-gray-700 mb-1">Logged in as <strong>{user.name}</strong></p>
               <button
                 onClick={() => { googleLogout(); setUser(null); }}
-                className="px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-lg shadow transition duration-300"
+                className="px-4 py-2 bg-gradient-to-r from-red-500 to-red-600 hover:from-red-600 hover:to-red-700 text-white rounded-lg shadow transition duration-300 cursor-pointer"
               >
                 Logout
               </button>
@@ -157,8 +157,8 @@ const App = () => {
                   onClick={handleToggleAttendance}
                   className={`mt-4 w-full py-2 px-4 rounded-xl text-white text-lg ${
                     isAttendanceMarked
-                      ? 'bg-red-500 hover:bg-red-600'
-                      : 'bg-indigo-600 hover:bg-indigo-700'
+                      ? 'bg-red-500 hover:bg-red-600 cursor-pointer'
+                      : 'bg-indigo-600 hover:bg-indigo-700 cursor-pointer'
                   }`}
                 >
                   {isAttendanceMarked ? 'Unmark Attendance' : 'Mark Attendance'}
@@ -170,7 +170,7 @@ const App = () => {
                   <h2 className="text-lg font-semibold text-indigo-800">Attendance History</h2>
                   <button
                     onClick={handleExportCSV}
-                    className="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded-md text-sm"
+                    className="bg-green-500 hover:bg-green-600 text-white px-4 py-1 rounded-md text-sm cursor-pointer"
                   >
                     Export CSV
                   </button>
